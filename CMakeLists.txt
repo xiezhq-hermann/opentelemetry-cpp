@@ -402,7 +402,8 @@ if(BUILD_TESTING)
   message("GTEST_BOTH_LIBRARIES = ${GTEST_BOTH_LIBRARIES}")
   enable_testing()
   # Benchmark respects the CMAKE_PREFIX_PATH
-  find_package(benchmark CONFIG REQUIRED)
+  # find_package(benchmark CONFIG REQUIRED)
+  add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/third_party/benchmark)
 endif()
 
 include(CMakePackageConfigHelpers)
